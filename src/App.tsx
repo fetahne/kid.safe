@@ -31,13 +31,13 @@ import {
 } from './data/initialData';
 
 export default function App() {
-  // 1. Current User State (Default to 'fetahne' for instant access)
+  // 1. Current User State (Starts as null unless already logged in and saved in storage)
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('kidsafe_current_user');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) {}
     }
-    return INITIAL_USERS[0]; // fetahne (Admin)
+    return null;
   });
 
   // 2. Users / Participants List State
@@ -58,9 +58,7 @@ export default function App() {
     return INITIAL_CHILDREN;
   });
 
-  const [activeChildId, setActiveChildId] = useState<string>(() => {
-    return INITIAL_CHILDREN[0]?.id || 'child-can';
-  });
+  const [activeChildId, setActiveChildId] = useState<string>('');
 
   // 4. Allowed Apps List
   const [allowedAppsList, setAllowedAppsList] = useState<AllowedApp[]>(() => {

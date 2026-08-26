@@ -306,10 +306,6 @@ export const SecurityUnlockModal: React.FC<SecurityUnlockModalProps> = ({
                   Sil ⌫
                 </button>
               </div>
-
-              <p className="text-[11px] text-slate-400 mt-2">
-                Varsayılan Demo PIN: <span className="font-mono text-indigo-600 font-bold">{childProfile.parentPin || '1234'}</span>
-              </p>
             </div>
           )}
 
@@ -345,10 +341,6 @@ export const SecurityUnlockModal: React.FC<SecurityUnlockModalProps> = ({
               >
                 Cevabı Doğrula ve Kilidi Aç
               </button>
-
-              <p className="text-[11px] text-center text-slate-400">
-                Demo İpucu: <span className="text-indigo-600 font-semibold">{childProfile.securityQuestion?.answer || '1923'}</span>
-              </p>
             </form>
           )}
 

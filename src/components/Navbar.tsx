@@ -48,13 +48,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         
         {/* Brand Logo & Name */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-extrabold text-white text-base shadow-md shadow-indigo-500/30">
-            F
+          <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-black text-white text-xs tracking-tight shadow-md shadow-indigo-500/30">
+            KS
           </div>
           <div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-base tracking-tight text-white">
-                Fetahne Safe
+                KidSafe
               </span>
               <span className="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
                 Sistem Aktif
@@ -121,17 +121,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
         </div>
 
-        {/* Right Actions: Project ID, Privacy, Notifications, User */}
+        {/* Right Actions: Privacy, Notifications, User */}
         <div className="flex items-center gap-3">
           
-          {/* Project ID indicator */}
-          <div className="hidden lg:flex flex-col items-end mr-1">
-            <span className="text-[9px] text-slate-400 uppercase tracking-widest font-bold">Proje ID</span>
-            <span className="text-[11px] font-mono text-cyan-300 bg-slate-950 border border-slate-800 px-2 py-0.5 rounded-md">
-              frexkrmwkpyhruoryjvj
-            </span>
-          </div>
-
           {/* Privacy Button */}
           <button
             id="btn-privacy-settings"

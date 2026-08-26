@@ -195,10 +195,14 @@ export const ParentPanel: React.FC<ParentPanelProps> = ({
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="text-right hidden sm:block">
-            <p className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Yönetici</p>
-            <p className="text-xs font-bold text-slate-800">{currentUser?.fullName || 'Fetahne Aykan'}</p>
-          </div>
+          {currentUser && (
+            <div className="text-right hidden sm:block">
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">
+                {currentUser.role === 'ADMIN' ? 'Yönetici' : 'Ebeveyn'}
+              </p>
+              <p className="text-xs font-bold text-slate-800">{currentUser.fullName || currentUser.username}</p>
+            </div>
+          )}
           <button
             onClick={() => setShowAddChildModal(true)}
             className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm shadow-indigo-500/20"

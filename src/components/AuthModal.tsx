@@ -41,12 +41,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleQuickAdminLogin = () => {
-    setLoginUsername('fetahne');
-    setLoginPassword('fetahne07');
-    setErrorMessage(null);
-  };
-
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
@@ -86,7 +80,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       }
     }
 
-    setErrorMessage('Kullanıcı adı veya şifre hatalı. Lütfen "fetahne" ve "fetahne07" ile giriş yapın veya yeni kayıt olun.');
+    setErrorMessage('Kullanıcı adı veya şifre hatalı. Lütfen bilgilerinizi kontrol edip tekrar deneyin.');
   };
 
   const handleRegisterSubmit = (e: React.FormEvent) => {
@@ -150,24 +144,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           </button>
         </div>
 
-        {/* Quick Admin Demo Login Banner */}
-        <div className="p-3.5 bg-indigo-50/70 border-b border-indigo-100/70 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs text-indigo-900">
-            <Sparkles className="w-4 h-4 text-indigo-600 shrink-0" />
-            <div>
-              <span className="font-semibold text-slate-900">Yönetici Giriş Bilgileri:</span>
-              <span className="font-mono text-indigo-700 ml-1.5 font-bold">fetahne</span> / <span className="font-mono text-indigo-700 font-bold">fetahne07</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={handleQuickAdminLogin}
-            className="text-[11px] font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-1 rounded-lg transition-colors shadow-sm"
-          >
-            Otomatik Doldur
-          </button>
-        </div>
-
         {/* Tabs */}
         <div className="flex border-b border-slate-200 bg-slate-50">
           <button
@@ -219,7 +195,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     id="input-login-username"
                     type="text"
                     required
-                    placeholder="Örn: fetahne"
+                    placeholder="Kullanıcı adınız"
                     value={loginUsername}
                     onChange={(e) => setLoginUsername(e.target.value)}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-3.5 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors"

@@ -56,9 +56,6 @@ export const SqlSchemaViewer: React.FC = () => {
             <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-100 uppercase tracking-wider">
               Supabase Veritabanı & SQL Şeması
             </span>
-            <span className="text-xs text-slate-500">
-              Proje ID: <strong className="text-slate-800 font-mono">{SUPABASE_CONFIG.projectId}</strong>
-            </span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">
             PostgreSQL / Supabase Veritabanı Şeması
@@ -135,7 +132,7 @@ export const SqlSchemaViewer: React.FC = () => {
         <ol className="text-xs text-slate-600 space-y-1.5 list-decimal list-inside">
           <li>Yukarıdaki <strong>"SQL Kodunu Kopyala"</strong> butonuna tıklayın.</li>
           <li>
-            Supabase projenizde (<a href={`https://supabase.com/dashboard/project/${SUPABASE_CONFIG.projectId}/sql`} target="_blank" rel="noreferrer" className="text-indigo-600 underline inline-flex items-center gap-1 font-semibold">SQL Editor <ExternalLink className="w-3 h-3" /></a>) sayfasına gidin.
+            Supabase panelinizde (<a href="https://supabase.com/dashboard" target="_blank" rel="noreferrer" className="text-indigo-600 underline inline-flex items-center gap-1 font-semibold">SQL Editor <ExternalLink className="w-3 h-3" /></a>) sayfasına gidin.
           </li>
           <li><strong>"New query"</strong> butonuna tıklayıp kopyaladığınız SQL kodunu yapıştırın.</li>
           <li>Sağ alttaki yeşil <strong>"RUN"</strong> butonuna basın. Tüm tablolar ve kurallar otomatik kurulacaktır.</li>
