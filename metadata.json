@@ -1,0 +1,6 @@
+{
+  "name": "KidSafe & Ebeveyn Kontrol Portalı",
+  "description": "Rol tabanlı yetkilendirme, güvenli çocuk ekran süresi yönetimi, uygulama izinleri, ebeveyn bildirim ve aktivite loglama platformu.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
